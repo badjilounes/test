@@ -1,0 +1,35 @@
+<div class="cours-content">
+  <h1>DEFINITIONS ET ROLES DU HTML ET DU CSS</h1>
+  <div class="video"><iframe width="560" height="315" src="https://www.youtube.com/embed/dlE4EUXU09s" frameborder="0" allowfullscreen=""></iframe></div>
+
+  <h2>Le HTML, ou HyperText Markup Language</h2>
+  <p><strong>HTML est l’abréviation de HyperText Markup Language</strong>, soit en français « langage de balisage hypertexte ».</p>
+  <p>Ce langage a été créé en 1991 et a pour fonction de structurer et de donner du sens à du contenu.</p>
+  <p>Grâce au HTML, on va par exemple pouvoir indiquer au navigateur que tel texte doit être considéré comme un simple paragraphe ou que tel autre est un titre.</p>
+  <p>Le code HTML ci-dessous par exemple indique que l’on souhaite créer un grand titre (grâce à l’élément <code class="elt">h1</code>) et un paragraphe (grâce à l’élément <code class="elt">p</code>).</p>
+  <p><img [src]="'assets/img/html/role-html-structurer-page.png'" alt="Le HTML nous permet de structurer une page en donnant du sens au contenu"></p>
+  <p>Le HTML va également nous permettre d’insérer différents types d’éléments dans nos pages web : du texte, des liens, des images, etc.</p>
+
+  <h2>Le CSS, ou Cascading StyleSheets</h2>
+  <p><strong>CSS est le diminutif de Cascading StyleSheets</strong>, ou feuilles de styles en cascade.</p>
+  <p>Le CSS a été créé en 1996 et a pour rôle de mettre en forme du contenu en lui appliquant ce qu’on appelle des styles.</p>
+  <p>Le CSS va nous permettre par exemple de définir la taille, la couleur ou l’alignement d’un texte.</p>
+  <p>Nous allons donc utiliser le CSS sur notre code HTML, afin d’enjoliver le résultat visuel final.</p>
+  <p>Le code ci-dessous par exemple indique que les titres <code class="elt">h1</code> écrits en HTML doivent avoir une couleur rouge et une taille de 14px tandis que les paragraphes doivent être bleus et soulignés.</p>
+  <p><img [src]="'assets/img/html/role-css-mettre-en-forme-html.png'" alt="Le CSS nous permet de modifier la couleur ou la taille de nos textes"></p>
+
+  <h2>N’utilisez jamais le HTML pour la mise en forme !</h2>
+  <p>Voilà une chose que je vais vous répéter encore et encore au fil de ces premiers chapitres : <strong>vous ne devez jamais utiliser le HTML pour faire le travail du CSS</strong>.</p>
+  <p>En effet, si vous affichez la page en HTML créée ci-dessus sans le CSS, vous pouvez remarquer que le contenu qui a été déclaré comme étant un titre s’affiche en grand et en gras, tandis que la taille de la police de notre paragraphe est plus petite.</p>
+  <p><img [src]="'assets/img/html/titre-paragraphe-html.png'" alt="Le navigateur applique un style par défaut à notre code HTML"></p>
+
+  <p>Certains débutants en déduisent donc « pour mettre un texte en grand et en gras, il suffit de créer un titre ». Sortez vous cela immédiatement de la tête !</p>
+  <p>Le HTML est un langage qui a été créé pour structurer des pages et pour donner du sens au contenu. Le principe même du HTML est d’indiquer aux navigateurs que tel texte est bien un titre et tel autre est bien un simple paragraphe.</p>
+  <p>Si le titre s’affiche en grand et en gras ici, c’est tout simplement dû au traitement par défaut de celui-ci par votre navigateur : le navigateur a détecté un titre, et va donc par défaut lui attribuer une grande taille et un poids de police plus lourd.</p>
+  <p>Si vous faussez le tout en déclarant par exemple des titres qui n’en sont pas, vous pervertissez le rôle du HTML et cela va impacter fortement la qualité de votre page web, sa validité et votre référencement global.</p>
+  <p>Une nouvelle fois, pour mettre un texte en grand ou en petit, en gras ou en italique, en rouge ou en bleu… nous utiliserons le langage CSS qui a été créé pour cela.</p>
+  <p><img [src]="'assets/img/html/titre-paragraphe-html-css.png'" alt="Nous mettons en forme notre code HTML avec l'aide du CSS"></p>
+
+  <a><button mat-button>Essayer ce code</button></a>
+
+</div>

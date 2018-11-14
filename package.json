@@ -1,0 +1,12 @@
+{
+  "name": "angular_latest",
+  "version": "1.0.0",
+  "description": "angular latest",
+  "scripts": {},
+  "author": "Badji Lounès",
+  "license": "ISC",
+  "devDependencies": {},
+  "dependencies": {
+    "@angular/cli": "^7.0.2"
+  }
+}

